@@ -1,30 +1,81 @@
 const output = document.getElementById("output")
 const source = document.getElementById("source")
-const btn1 = document.getElementsByClassName("uk-button uk-button-primary")[0]
-const btn2 = document.getElementsByClassName("uk-button uk-button-primary")[1]
-const btn3 = document.getElementsByClassName("uk-button uk-button-primary")[2]
-const btn4 = document.getElementsByClassName("uk-button uk-button-primary")[3]
+const toggle1 = document.getElementById("toggle1")
+const toggle2 = document.getElementById("toggle2")
+const toggle3 = document.getElementById("toggle3")
+const toggle4 = document.getElementById("toggle4")
 
-/*fetch('https://hf3xzw.deta.dev/s-04/toggle', {method: 'PUT'})
-  .then(response => response.json())
-  .then(result => {
-    console.log('Success:', result)
-  })
-  .catch(error => {
-    console.error('Error:', error)
-  }
-  )*/
+setInterval(
+  function() {
+    fetch("https://hf3xzw.deta.dev/")
+      .then(response => response.json())
+      .then(body => {
+        // Aggiornamento descrizioni card
+        let dataArray = body["sensors"];
+        for (let i = 0; i < dataArray.length; i++) {
+          document.getElementsByClassName("uk-card-title")[i].innerHTML = String(dataArray[i].description).toUpperCase();
+          let text = "<b>ID</b>: " +  String(dataArray[i].id) + "<br>" +
+                      "<b>Latitudine</b>: " + String(dataArray[i].lat) + "<br>" +
+                      "<b>Longitudine</b>: " + String(dataArray[i].lng) + "<br>" +
+                      "<b>Luogo</b>: " + String(dataArray[i].place) + "<br>" +
+                      "<b>Solo lettura</b>: " + String(dataArray[i].readonly) + "<br>" +
+                      "<b>Codice dello stato</b>: " + String(dataArray[i].state_code) +  "<br>" +
+                      "<b>Valore</b>: " + String(dataArray[i].value);
+          document.getElementsByClassName("uk-card-description")[i].innerHTML = text;
+        }
+        // Aggiornamento grafici
+        myChart5.data.datasets[0].data.push(body['sensors'][4]['value']);
+        myChart5.data.datasets[0].label = "Valori " + String(dataArray[4].description);
+        myChart5.update();
+        if (myChart5.data.datasets[0].data.length == 10)
+          myChart5.data.datasets[0].data.shift();
+        myChart6.data.datasets[0].data.push(body['sensors'][5]['value']);
+        myChart6.data.datasets[0].label = "Valori " + String(dataArray[5].description);
+        myChart6.update();
+        if (myChart6.data.datasets[0].data.length == 10)
+          myChart6.data.datasets[0].data.shift();
+        myChart7.data.datasets[0].data.push(body['sensors'][6]['value']);
+        myChart7.data.datasets[0].label = "Valori " + String(dataArray[6].description);
+        myChart7.update();
+        if (myChart7.data.datasets[0].data.length == 10)
+          myChart7.data.datasets[0].data.shift();
+        myChart8.data.datasets[0].data.push(body['sensors'][7]['value']);
+        myChart8.data.datasets[0].label = "Valori " + String(dataArray[7].description);
+        myChart8.update();
+        if (myChart8.data.datasets[0].data.length == 10)
+          myChart8.data.datasets[0].data.shift();
+        // Aggiornamento dati raw
+        let rawData = JSON.stringify(body, null, 4);
+        source.innerHTML = rawData;
+      })
+  }, 2000);
 
-fetch("https://hf3xzw.deta.dev/")
-  .then(response => response.json())
-  .then(body => {
-    var dataArray = body["sensors"];
-    for (var i = 0; i < dataArray.length; i++) {
-      document.getElementsByClassName("uk-card-title")[i].innerHTML = "Sensore " + (i+1)
-      document.getElementsByClassName("uk-card-description")[i].innerHTML = JSON.stringify(dataArray[i], null, 2)
-    }
 
-    const allData = JSON.stringify(body, null, 4)
-    source.appendChild(document.createElement('pre')).innerText = allData
-  }
-)
+toggle1.onclick = () => {
+  fetch('https://hf3xzw.deta.dev/s-01/toggle', { method: 'PUT' })
+    .then(response => response.json())
+    .then(result => {
+      alert("Stato del sensore cambiato! Attendi per visualizzare il cambiamento.");
+    })
+}
+toggle2.onclick = () => {
+  fetch('https://hf3xzw.deta.dev/s-02/toggle', { method: 'PUT' })
+    .then(response => response.json())
+    .then(result => {
+      alert("Stato del sensore cambiato! Attendi per visualizzare il cambiamento.");
+    })
+}
+toggle3.onclick = () => {
+  fetch('https://hf3xzw.deta.dev/s-03/toggle', { method: 'PUT' })
+    .then(response => response.json())
+    .then(result => {
+      alert("Stato del sensore cambiato! Attendi per visualizzare il cambiamento.");
+    })
+}
+toggle4.onclick = () => {
+  fetch('https://hf3xzw.deta.dev/s-04/toggle', { method: 'PUT' })
+    .then(response => response.json())
+    .then(result => {
+      alert("Stato del sensore cambiato! Attendi per visualizzare il cambiamento.");
+    })
+}

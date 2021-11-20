@@ -1,93 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>sensors-js</title>
 
-  <!-- UIkit CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.8.0/dist/css/uikit.min.css" />
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.8.0/dist/css/uikit.min.css" />
 
-  <!-- UIkit JS -->
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.8.0/dist/js/uikit.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.8.0/dist/js/uikit-icons.min.js"></script>
+	<!-- UIkit JS -->
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.8.0/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.8.0/dist/js/uikit-icons.min.js"></script>
+
+	<!-- chartjs -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.js"></script>
 
 </head>
+
 <body>
-  <h1 style="text-align: center">Pannello di controllo sensori</h1>
-  <div class="uk-container uk-container-expand">
-    
+	<h1 style="text-align: center">Pannello di controllo sensori</h1>
+	<div class="uk-container uk-container-expand">
     <div class="uk-child-width-1-4@s uk-grid-match" uk-grid>
       <div>
         <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-          <h3 class="uk-card-title"></h3>
-          <pre class="uk-card-description"></pre>
-          <button class="uk-button uk-button-primary">Toggle</button>
-          <button class="uk-button uk-button-secondary">Info</button>
+          <h3 class="uk-card-title">Caricamento...</h3>
+          <p class="uk-card-description"></p>
+          <button class="uk-button uk-button-primary" id="toggle1">Toggle</button>
         </div>
       </div>
       <div>
         <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-          <h3 class="uk-card-title"></h3>
-          <pre class="uk-card-description"></pre>
-          <button class="uk-button uk-button-primary">Toggle</button>
-          <button class="uk-button uk-button-secondary">Info</button>
+          <h3 class="uk-card-title">Caricamento...</h3>
+          <p class="uk-card-description"></p>
+          <button class="uk-button uk-button-primary" id="toggle2">Toggle</button>
         </div>
       </div>
       <div>
         <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-          <h3 class="uk-card-title"></h3>
-          <pre class="uk-card-description"></pre>
-          <button class="uk-button uk-button-primary">Toggle</button>
-          <button class="uk-button uk-button-secondary">Info</button>
+          <h3 class="uk-card-title">Caricamento...</h3>
+          <p class="uk-card-description"></p>
+          <button class="uk-button uk-button-primary" id="toggle3">Toggle</button>
         </div>
       </div>
       <div>
         <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-          <h3 class="uk-card-title"></h3>
-          <pre class="uk-card-description"></pre>
-          <button class="uk-button uk-button-primary">Toggle</button>
-          <button class="uk-button uk-button-secondary">Info</button>
+          <h3 class="uk-card-title">Caricamento...</h3>
+          <p class="uk-card-description"></p>
+          <button class="uk-button uk-button-primary" id="toggle4">Toggle</button>
         </div>
       </div>
     </div>
-    
     <div class="uk-child-width-1-4@s uk-grid-match" uk-grid>
       <div>
         <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-          <h3 class="uk-card-title"></h3>
-          <pre class="uk-card-description"></pre>
-          <button class="uk-button uk-button-secondary">Info</button>
+          <h3 class="uk-card-title">Caricamento...</h3>
+          <p class="uk-card-description"></p>
+          <pre><canvas id="chart5" width="100" height="100"></canvas></pre>
         </div>
       </div>
       <div>
         <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-          <h3 class="uk-card-title"></h3>
-          <pre class="uk-card-description"></pre>
-          <button class="uk-button uk-button-secondary">Info</button>
+          <h3 class="uk-card-title">Caricamento...</h3>
+          <p class="uk-card-description"></p>
+          <pre><canvas id="chart6" width="100" height="100"></canvas></pre>
         </div>
       </div>
       <div>
         <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-          <h3 class="uk-card-title"></h3>
-          <pre class="uk-card-description"></pre>
-          <button class="uk-button uk-button-secondary">Info</button>
+          <h3 class="uk-card-title">Caricamento...</h3>
+          <p class="uk-card-description"></p>
+          <pre><canvas id="chart7" width="100" height="100"></canvas></pre>
         </div>
       </div>
       <div>
         <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-          <h3 class="uk-card-title"></h3>
-          <pre class="uk-card-description"></pre>
-          <button class="uk-button uk-button-secondary">Info</button>
+          <h3 class="uk-card-title">Caricamento...</h3>
+          <p class="uk-card-description"></p>
+          <pre><canvas id="chart8" width="100" height="100"></canvas></pre>
         </div>
       </div>
     </div>
     
     <!-- <p id="output"></p> -->
     <h2>Dati della fonte</h2>
-    <p id="source"></p>
-    <script src="script.js"></script>
-
+    <pre id="source"></pre>
   </div>
+  
+  <script src="script.js"></script>
+  <script src='chart.js'></script>
 </body>
 </html>
