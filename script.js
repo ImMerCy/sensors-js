@@ -25,22 +25,18 @@ setInterval(
         }
         // Aggiornamento grafici
         myChart5.data.datasets[0].data.push(body['sensors'][4]['value']);
-        myChart5.data.datasets[0].label = "Valori " + String(dataArray[4].description);
         myChart5.update();
         if (myChart5.data.datasets[0].data.length == 10)
           myChart5.data.datasets[0].data.shift();
         myChart6.data.datasets[0].data.push(body['sensors'][5]['value']);
-        myChart6.data.datasets[0].label = "Valori " + String(dataArray[5].description);
         myChart6.update();
         if (myChart6.data.datasets[0].data.length == 10)
           myChart6.data.datasets[0].data.shift();
         myChart7.data.datasets[0].data.push(body['sensors'][6]['value']);
-        myChart7.data.datasets[0].label = "Valori " + String(dataArray[6].description);
         myChart7.update();
         if (myChart7.data.datasets[0].data.length == 10)
           myChart7.data.datasets[0].data.shift();
         myChart8.data.datasets[0].data.push(body['sensors'][7]['value']);
-        myChart8.data.datasets[0].label = "Valori " + String(dataArray[7].description);
         myChart8.update();
         if (myChart8.data.datasets[0].data.length == 10)
           myChart8.data.datasets[0].data.shift();

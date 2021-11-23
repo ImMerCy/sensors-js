@@ -1,92 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>sensors-js</title>
-
-	<!-- UIkit CSS -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.8.0/dist/css/uikit.min.css" />
-
-	<!-- UIkit JS -->
-	<script src="https://cdn.jsdelivr.net/npm/uikit@3.8.0/dist/js/uikit.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/uikit@3.8.0/dist/js/uikit-icons.min.js"></script>
-
+  <!-- style.css -->
+  <link rel="stylesheet" href="style.css" />
 	<!-- chartjs -->
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.js"></script>
-
 </head>
-
 <body>
-	<h1 style="text-align: center">Pannello di controllo sensori</h1>
-	<div class="uk-container uk-container-expand">
-    <div class="uk-child-width-1-4@s uk-grid-match" uk-grid>
-      <div>
-        <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+  <h1 class="title">PANNELLO DI CONTROLLO SENSORI</h1>
+  <div class="container">
+    <div class="card sm-card">
+      <div class="box">
+        <div class="content">
+          <h2>01</h2>
           <h3 class="uk-card-title">Caricamento...</h3>
           <p class="uk-card-description"></p>
-          <button class="uk-button uk-button-primary" id="toggle1">Toggle</button>
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-          <h3 class="uk-card-title">Caricamento...</h3>
-          <p class="uk-card-description"></p>
-          <button class="uk-button uk-button-primary" id="toggle2">Toggle</button>
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-          <h3 class="uk-card-title">Caricamento...</h3>
-          <p class="uk-card-description"></p>
-          <button class="uk-button uk-button-primary" id="toggle3">Toggle</button>
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-          <h3 class="uk-card-title">Caricamento...</h3>
-          <p class="uk-card-description"></p>
-          <button class="uk-button uk-button-primary" id="toggle4">Toggle</button>
+          <a id="toggle1">Switch</a>
         </div>
       </div>
     </div>
-    <div class="uk-child-width-1-4@s uk-grid-match" uk-grid>
-      <div>
-        <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+    <div class="card sm-card">
+      <div class="box">
+        <div class="content">
+          <h2>02</h2>
           <h3 class="uk-card-title">Caricamento...</h3>
           <p class="uk-card-description"></p>
-          <pre><canvas id="chart5" width="100" height="100"></canvas></pre>
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-          <h3 class="uk-card-title">Caricamento...</h3>
-          <p class="uk-card-description"></p>
-          <pre><canvas id="chart6" width="100" height="100"></canvas></pre>
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-          <h3 class="uk-card-title">Caricamento...</h3>
-          <p class="uk-card-description"></p>
-          <pre><canvas id="chart7" width="100" height="100"></canvas></pre>
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-          <h3 class="uk-card-title">Caricamento...</h3>
-          <p class="uk-card-description"></p>
-          <pre><canvas id="chart8" width="100" height="100"></canvas></pre>
+          <a id="toggle2">Switch</a>
         </div>
       </div>
     </div>
-    
-    <!-- <p id="output"></p> -->
-    <h2>Dati della fonte</h2>
-    <pre id="source"></pre>
+    <div class="card sm-card">
+      <div class="box">
+        <div class="content">
+          <h2>03</h2>
+          <h3 class="uk-card-title">Caricamento...</h3>
+          <p class="uk-card-description"></p>
+          <a id="toggle3">Switch</a>
+        </div>
+      </div>
+    </div>
+    <div class="card sm-card">
+      <div class="box">
+        <div class="content">
+          <h2>04</h2>
+          <h3 class="uk-card-title">Caricamento...</h3>
+          <p class="uk-card-description"></p>
+          <a id="toggle4">Switch</a>
+        </div>
+      </div>
+    </div>
+    <div class="card lg-card">
+      <div class="box">
+        <div class="content">
+          <h2>05</h2>
+          <h3 class="uk-card-title">Caricamento...</h3>
+          <p class="uk-card-description"></p>
+          <canvas id="chart5" width="100" height="100"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="card lg-card">
+      <div class="box">
+        <div class="content">
+          <h2>06</h2>
+          <h3 class="uk-card-title">Caricamento...</h3>
+          <p class="uk-card-description"></p>
+          <canvas id="chart6" width="100" height="100"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="card lg-card">
+      <div class="box">
+        <div class="content">
+          <h2>07</h2>
+          <h3 class="uk-card-title">Caricamento...</h3>
+          <p class="uk-card-description"></p>
+          <canvas id="chart7" width="100" height="100"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="card lg-card">
+      <div class="box">
+        <div class="content">
+          <h2>08</h2>
+          <h3 class="uk-card-title">Caricamento...</h3>
+          <p class="uk-card-description"></p>
+          <canvas id="chart8" width="100" height="100"></canvas>
+        </div>
+      </div>
+    </div>
   </div>
-  
   <script src="script.js"></script>
   <script src='chart.js'></script>
 </body>
