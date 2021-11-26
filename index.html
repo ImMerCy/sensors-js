@@ -8,92 +8,128 @@
   <link rel="stylesheet" href="style.css" />
 	<!-- chartjs -->
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.js"></script>
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 </head>
 <body>
-  <h1 class="title">PANNELLO DI CONTROLLO SENSORI</h1>
-  <div class="container">
-    <div class="card sm-card">
-      <div class="box">
-        <div class="content">
-          <h2>01</h2>
-          <h3 class="uk-card-title">Caricamento...</h3>
-          <p class="uk-card-description"></p>
-          <a id="toggle1">Switch</a>
-        </div>
+  <div class="shadow-title parallax-top-shadow">mercy</div>
+  <div class="section-parallax parallax-00" style="background-image: url('http://www.ivang-design.com/svg-load/parallax/parallax-0.png');"></div>
+  <div class="section-parallax parallax-01" style="background-image: url('http://www.ivang-design.com/svg-load/parallax/parallax-01.png');"></div>
+
+  <div class="section full-height">
+    <div class="section-title-wrap">
+      <div class="p-container">
+        <div class="row">
+          <div class="col-12 text-center parallax-fade-top">
+            <p>Brignani Federico</p>	
+            <h1>pannello di<br>controllo sensori</h1>
+          </div>
+        </div>	
       </div>
     </div>
-    <div class="card sm-card">
-      <div class="box">
-        <div class="content">
-          <h2>02</h2>
-          <h3 class="uk-card-title">Caricamento...</h3>
-          <p class="uk-card-description"></p>
-          <a id="toggle2">Switch</a>
+  </div>
+
+  <div class="section full-height z-bigger">
+    <div class="container">
+      <div class="card sm-card">
+        <div class="box">
+          <div class="content">
+            <h2>01</h2>
+            <h3 class="box-title">Caricamento...</h3>
+            <p class="box-description"></p>
+            <a id="toggle1">Switch</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card sm-card">
-      <div class="box">
-        <div class="content">
-          <h2>03</h2>
-          <h3 class="uk-card-title">Caricamento...</h3>
-          <p class="uk-card-description"></p>
-          <a id="toggle3">Switch</a>
+      <div class="card sm-card">
+        <div class="box">
+          <div class="content">
+            <h2>02</h2>
+            <h3 class="box-title">Caricamento...</h3>
+            <p class="box-description"></p>
+            <a id="toggle2">Switch</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card sm-card">
-      <div class="box">
-        <div class="content">
-          <h2>04</h2>
-          <h3 class="uk-card-title">Caricamento...</h3>
-          <p class="uk-card-description"></p>
-          <a id="toggle4">Switch</a>
+      <div class="card sm-card">
+        <div class="box">
+          <div class="content">
+            <h2>03</h2>
+            <h3 class="box-title">Caricamento...</h3>
+            <p class="box-description"></p>
+            <a id="toggle3">Switch</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card lg-card">
-      <div class="box">
-        <div class="content">
-          <h2>05</h2>
-          <h3 class="uk-card-title">Caricamento...</h3>
-          <p class="uk-card-description"></p>
-          <canvas id="chart5" width="100" height="100"></canvas>
+      <div class="card sm-card">
+        <div class="box">
+          <div class="content">
+            <h2>04</h2>
+            <h3 class="box-title">Caricamento...</h3>
+            <p class="box-description"></p>
+            <a id="toggle4">Switch</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card lg-card">
-      <div class="box">
-        <div class="content">
-          <h2>06</h2>
-          <h3 class="uk-card-title">Caricamento...</h3>
-          <p class="uk-card-description"></p>
-          <canvas id="chart6" width="100" height="100"></canvas>
+      <div class="card lg-card">
+        <div class="box">
+          <div class="content">
+            <h2>05</h2>
+            <h3 class="box-title">Caricamento...</h3>
+            <p class="box-description"></p>
+            <canvas id="chart5" width="100" height="100"></canvas>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card lg-card">
-      <div class="box">
-        <div class="content">
-          <h2>07</h2>
-          <h3 class="uk-card-title">Caricamento...</h3>
-          <p class="uk-card-description"></p>
-          <canvas id="chart7" width="100" height="100"></canvas>
+      <div class="card lg-card">
+        <div class="box">
+          <div class="content">
+            <h2>06</h2>
+            <h3 class="box-title">Caricamento...</h3>
+            <p class="box-description"></p>
+            <canvas id="chart6" width="100" height="100"></canvas>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card lg-card">
-      <div class="box">
-        <div class="content">
-          <h2>08</h2>
-          <h3 class="uk-card-title">Caricamento...</h3>
-          <p class="uk-card-description"></p>
-          <canvas id="chart8" width="100" height="100"></canvas>
+      <div class="card lg-card">
+        <div class="box">
+          <div class="content">
+            <h2>07</h2>
+            <h3 class="box-title">Caricamento...</h3>
+            <p class="box-description"></p>
+            <canvas id="chart7" width="100" height="100"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="card lg-card">
+        <div class="box">
+          <div class="content">
+            <h2>08</h2>
+            <h3 class="box-title">Caricamento...</h3>
+            <p class="box-description"></p>
+            <canvas id="chart8" width="100" height="100"></canvas>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="section padding-top-bottom over-hide background-dark z-bigger-2">
+    <div class="p-container">
+      <div class="row justify-content-center">
+        <div class="col-md-7 text-center">
+          <a href="#" class="hover-target">
+            <div class="project-link-wrap">
+              <p>sensors-js</p>
+            </div>
+          </a>
+        </div>
+      </div>	
+    </div>			
+  </div>
+  <div class="scroll-to-top hover-target"></div>
   <script src="script.js"></script>
-  <script src='chart.js'></script>
+  <script src="chart.js"></script>
+  <script src="parallax.js"></script>
 </body>
 </html>

@@ -13,7 +13,7 @@ setInterval(
         // Aggiornamento descrizioni card
         let dataArray = body["sensors"];
         for (let i = 0; i < dataArray.length; i++) {
-          document.getElementsByClassName("uk-card-title")[i].innerHTML = String(dataArray[i].description).toUpperCase();
+          document.getElementsByClassName("box-title")[i].innerHTML = String(dataArray[i].description).toUpperCase();
           let text = "<b>ID</b>: " +  String(dataArray[i].id) + "<br>" +
                       "<b>Latitudine</b>: " + String(dataArray[i].lat) + "<br>" +
                       "<b>Longitudine</b>: " + String(dataArray[i].lng) + "<br>" +
@@ -21,7 +21,7 @@ setInterval(
                       "<b>Solo lettura</b>: " + String(dataArray[i].readonly) + "<br>" +
                       "<b>Codice dello stato</b>: " + String(dataArray[i].state_code) +  "<br>" +
                       "<b>Valore</b>: " + String(dataArray[i].value);
-          document.getElementsByClassName("uk-card-description")[i].innerHTML = text;
+          document.getElementsByClassName("box-description")[i].innerHTML = text;
         }
         // Aggiornamento grafici
         myChart5.data.datasets[0].data.push(body['sensors'][4]['value']);
