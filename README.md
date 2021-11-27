@@ -1,13 +1,22 @@
-# 2021-progetto-javascript
-Base per il progetto
+# 2021 progetto "sensors-js"
 
+## Scopo del progetto
+Lo scopo del progetto è quello di recuperare dei dati da un'API esterna tramite una fetch, per poi gestirli e stamparli in una propria pagina HTML.
+La fonte dei dati si trova a questo indirizzo: https://hf3xzw.deta.dev/.
 
-Realizzare un progetto javascript di visualizzazìone dei 
-dati che vengono forniti dall'api spiegata qua: https://github.com/ProfAndreaPollini/python-iot-sim
+## Linguaggi utilizzati
+- HTML
+- JavaScript
+- CSS
 
-Da presentare:
+## User stories
+Illustrate nella sezione <a href="https://github.com/ImMerCy/sensors-js/projects">`Projects`</a> del progetto.
 
-* link al reporitory
-* descrizione del progetto + user story (usando il "project" del repo) + link a librerie utilizzate (nel README.md)
+## Funzionalità implementate
+Illustrate nel file `ROADMAP.md`.
 
-buon lavoro
+## Dipendenze
+- Base del progetto ereditata dal repository <a href="https://github.com/ProfAndreaPollini/python-iot-sim">python-iot-sim</a>.
+- Librerie utilizzate:
+  - <a href="https://chartjs.org">Chart.js</a> (per l'implementazione dei grafici)
+  - <a href="https://jquery.com/">jQuery</a> (per utilizzare il plugin parallax.js)
