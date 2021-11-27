@@ -10,13 +10,16 @@ La fonte dei dati si trova a questo indirizzo: https://hf3xzw.deta.dev/.
 - CSS
 
 ## User stories
-Illustrate nella sezione <a href="https://github.com/ImMerCy/sensors-js/projects">`Projects`</a> del progetto.
+Illustrate nella sezione [Projects](https://github.com/ImMerCy/sensors-js/projects) del progetto.
 
 ## Funzionalità implementate
 Illustrate nel file `ROADMAP.md`.
 
 ## Dipendenze
-- Base del progetto ereditata dal repository <a href="https://github.com/ProfAndreaPollini/python-iot-sim">python-iot-sim</a>.
+- Base del progetto ereditata dal repository [python-iot-sim](https://github.com/ProfAndreaPollini/python-iot-sim).
 - Librerie utilizzate:
-  - <a href="https://chartjs.org">Chart.js</a> (per l'implementazione dei grafici)
-  - <a href="https://jquery.com/">jQuery</a> (per utilizzare il plugin parallax.js)
+  - [Chart.js](https://chartjs.org) (per l'implementazione dei grafici)
+  - [jQuery](https://jquery.com/) (per utilizzare il plugin parallax.js)
+
+> **Attenzione!** <br/>
+Per il corretto funzionamento della fetch, quindi per stampare i dati a schermo, è necessario installare e attivare un'estensione di Chrome chiamata "[CORS Unblock](https://chrome.google.com/webstore/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino)". Se questa estensione non viene impementata i dati dei sensori non potranno essere né recuperati né aggiornati, quindi le card nel sito rimarranno vuote.
