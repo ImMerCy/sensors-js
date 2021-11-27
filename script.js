@@ -40,9 +40,9 @@ setInterval(
         myChart8.update();
         if (myChart8.data.datasets[0].data.length == 10)
           myChart8.data.datasets[0].data.shift();
-        // Aggiornamento dati raw
+        /* Aggiornamento dati raw
         let rawData = JSON.stringify(body, null, 4);
-        source.innerHTML = rawData;
+        source.innerHTML = rawData; */
       })
   }, 2000);
 
